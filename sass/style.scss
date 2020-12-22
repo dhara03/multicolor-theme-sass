@@ -1,0 +1,92 @@
+// Color themes
+$themes: (grey: #636363,
+  maroon: #611115,
+  orange: #ee6424,
+  green: #1bac22,
+  blue: #1760be,
+  pink: #d31976);
+
+
+// Helper theme mixin
+// $name: name of the theme (HTML class)
+// $color: color of the theme
+@mixin theme($name, $color) {
+  .#{$name} {
+    .outerbox {
+      border-color: darken($color, 10%);
+    }
+
+    .outerbox__heading {
+      color: $color;
+    }
+
+    .outerbox-item {
+      background: lighten($color, 15%);
+    }
+  }
+
+  [data-theme='#{$name}'] {
+    background: $color;
+
+    &:hover {
+      background: darken($color, 10%);
+    }
+
+    &[disabled] {
+      background: desaturate($color, 40%);
+    }
+  }
+}
+
+// Including themes 
+// By looping through the $themes map
+@each $key,
+$value in $themes {
+  @include theme($key, $value);
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+// Default styles
+.outerbox {
+  height         : 500px;
+  width          : 500px;
+  border         : 8px solid;
+  border-radius  : 100%;
+  position       : relative;
+  display        : flex;
+  flex-flow      : column;
+  align-items    : center;
+  justify-content: space-evenly;
+}
+
+.row {
+  display        : flex;
+  align-items    : center;
+  width          : 100%;
+  justify-content: space-evenly;
+}
+
+.eye-item {
+  width        : 40px;
+  height       : 40px;
+  border-radius: 100%;
+}
+
+.smile-item {
+  width        : 200px;
+  height       : 100px;
+  border-radius: 0 0 100px 100px;
+}
+
+.controls>button {
+  border       : none;
+  color        : white;
+  padding      : .5em;
+  border-radius: .15em;
+  font-weight  : bold;
+  margin-bottom: .5em;
+}
