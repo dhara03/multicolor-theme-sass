@@ -11,8 +11,8 @@
           var $node = $(this),
               theme = $node.data('theme');
           _self.settings.wrapper.removeClass().addClass('wrapper ' + theme);
-          _self.settings.buttons.removeAttr('disabled');
-          $node.attr('disabled', true);
+          _self.settings.buttons.removeAttr('active');
+          $node.attr('active', true);
         });
       }
     };
