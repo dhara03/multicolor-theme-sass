@@ -31,7 +31,7 @@ $ gulp watch
 ```
 
 ## Status
-Project is: [![GitHub license](https://img.shields.io/github/license/dhara03/multicolor-theme-sass)] 
+Project is: [![GitHub license]](https://img.shields.io/github/license/dhara03/multicolor-theme-sass)
 [![GitHub issues](https://img.shields.io/github/issues/dhara03/multicolor-theme-sass)]
 [![GitHub forks](https://img.shields.io/github/forks/dhara03/multicolor-theme-sass)]
 [![GitHub Twitter](https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2Fdhara03%2Fmulticolor-theme-sass)]
